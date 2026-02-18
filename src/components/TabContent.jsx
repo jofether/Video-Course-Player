@@ -2,7 +2,8 @@ export default function TabContent({ activeTab, lessonId }) {
   if (activeTab === 'overview') {
     return (
       <div className="space-y-4 py-6">
-        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+        {/* [BUG - TYPO] Changed rounded-xl to rounded-xll (invalid class). [FIX] rounded-xl */}
+        <div className="bg-slate-800/50 p-6 rounded-xll border border-slate-700">
           <h3 className="font-bold mb-3 flex items-center space-x-2">
             <span className="text-cyan-400 text-lg">📚</span>
             <span>What You'll Learn</span>

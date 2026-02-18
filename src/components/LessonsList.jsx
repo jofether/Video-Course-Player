@@ -4,7 +4,8 @@ export default function LessonsList({ lessons, activeLesson, onLessonSelect }) {
   return (
     <div className="p-6 pt-0">
       <div className="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden">
-        <div className="p-6 border-b border-slate-700">
+        {/* [BUG - TYPO] Changed rounded-2xl to rounded-2x (missing 'l'). [FIX] rounded-2xl */}
+        <div className="p-6 border-b border-slate-700 rounded-2x">
           <h2 className="text-2xl font-bold flex items-center space-x-3">
             <span className="text-cyan-400 text-3xl">📖</span>
             <span>Course Curriculum</span>
@@ -46,7 +47,8 @@ function LessonItem({ lesson, isActive, isCompleted, onSelect }) {
       </div>
 
       <div className="flex-1">
-        <h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-200 group-hover:text-white'}`}>
+        {/* [BUG - COLOR & CONTRAST] Changed text-slate-200 to text-slate-50, creating poor contrast. [FIX] text-slate-200 */}
+        <h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-50 group-hover:text-white'}`}>
           {lesson.title}
         </h3>
         <p className="text-sm text-slate-500 mt-1">{lesson.description}</p>
