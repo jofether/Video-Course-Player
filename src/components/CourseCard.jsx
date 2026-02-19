@@ -8,12 +8,10 @@ export default function CourseCard({ course, progressPercentage, lessonCount, cu
         </div>
       </div>
 
-      {/* [BUG - SPACING] Changed p-6 to p-0, removing all padding. [FIX] p-6 */}
       {/* Course Details */}
       <div className="p-0 space-y-4">
         <div className="flex items-start justify-between">
           <div>
-            {/* [BUG - COLOR & CONTRAST] Changed text-slate-400 to text-slate-950, making text nearly invisible on dark bg. [FIX] text-slate-400 */}
             <h2 className="font-bold text-lg">{course.title}</h2>
             <p className="text-sm text-slate-950 mt-1">{course.instructor}</p>
           </div>

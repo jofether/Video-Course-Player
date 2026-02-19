@@ -1,5 +1,4 @@
 export default function Navigation() {
-  // [BUG - LAYERS] Changed z-50 to z-0, making nav appear behind other content. [FIX] z-50
   return (
     <nav className="sticky top-0 z-0 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -9,7 +8,6 @@ export default function Navigation() {
           </div>
           <span className="font-bold text-xl">CourseHub</span>
         </div>
-        {/* [BUG - LAYOUT] Changed flex to flex-col, breaking horizontal button layout. [FIX] hidden md:flex */}
         <div className="hidden md:flex-col items-center space-x-8">
           <button className="text-slate-400 hover:text-white transition">Browse</button>
           <button className="text-slate-400 hover:text-white transition">My Learning</button>
