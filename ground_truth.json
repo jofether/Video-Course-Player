@@ -2,6 +2,7 @@
   "repository": "Video Course Player",
   "bugs": [
     {
+      "comment": "Bug #1 - grid-cols",
       "bug_category": "Layout",
       "bug_type": "grid-cols",
       "file_modified": "src/App.jsx",
@@ -10,13 +11,14 @@
       "buggy_code": "<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8 p-6\">",
       "css_selector": ".grid",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 0,
+            "y": 73,
+            "width": 1280,
+            "height": 2053
       }
     },
     {
+      "comment": "Bug #2 - padding",
       "bug_category": "Spacing",
       "bug_type": "padding",
       "file_modified": "src/components/CourseCard.jsx",
@@ -25,13 +27,14 @@
       "buggy_code": "<div className=\"p-0 space-y-4\">",
       "css_selector": ".p-0",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 25,
+            "y": 1522,
+            "width": 598,
+            "height": 374
       }
     },
     {
+      "comment": "Bug #3 - text-slate-950",
       "bug_category": "Color",
       "bug_type": "text-slate-950",
       "file_modified": "src/components/CourseCard.jsx",
@@ -40,13 +43,14 @@
       "buggy_code": "<p className=\"text-sm text-slate-950 mt-1\">{course.instructor}</p>",
       "css_selector": ".text-slate-950",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 25,
+            "y": 1554,
+            "width": 317,
+            "height": 20
       }
     },
     {
+      "comment": "Bug #4 - rounded-xll",
       "bug_category": "Typo",
       "bug_type": "rounded-xll",
       "file_modified": "src/components/LessonsList.jsx",
@@ -55,13 +59,14 @@
       "buggy_code": "<div className=\"p-6 border-b border-slate-700 rounded-2x\">",
       "css_selector": ".rounded-2x",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 25,
+            "y": 2127,
+            "width": 1230,
+            "height": 117
       }
     },
     {
+      "comment": "Bug #5 - text-slate-50",
       "bug_category": "Color",
       "bug_type": "text-slate-50",
       "file_modified": "src/components/LessonsList.jsx",
@@ -70,13 +75,14 @@
       "buggy_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-50 group-hover:text-white'}`}>",
       "css_selector": ".text-slate-50",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 101,
+            "y": 2381,
+            "width": 1118,
+            "height": 24
       }
     },
     {
+      "comment": "Bug #6 - z-index",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/Navigation.jsx",
@@ -85,13 +91,14 @@
       "buggy_code": "<nav className=\"sticky top-0 z-0 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
       "css_selector": ".z-0",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 73
       }
     },
     {
+      "comment": "Bug #7 - flexbox",
       "bug_category": "Layout",
       "bug_type": "flexbox",
       "file_modified": "src/components/Navigation.jsx",
@@ -100,13 +107,14 @@
       "buggy_code": "<div className=\"hidden md:flex-col items-center space-x-8\">",
       "css_selector": ".md:flex-col",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
       }
     },
     {
+      "comment": "Bug #8 - rounded-xll",
       "bug_category": "Typo",
       "bug_type": "rounded-xll",
       "file_modified": "src/components/TabContent.jsx",
@@ -115,13 +123,15 @@
       "buggy_code": "<div className=\"bg-slate-800/50 p-6 rounded-xll border border-slate-700\">",
       "css_selector": ".rounded-xll",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 24,
+            "y": 916,
+            "width": 1232,
+            "height": 172
       }
+
     },
     {
+      "comment": "Bug #9 - margin",
       "bug_category": "Spacing",
       "bug_type": "margin",
       "file_modified": "src/components/VideoPlayer.jsx",
@@ -130,13 +140,14 @@
       "buggy_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group -mb-12\">",
       "css_selector": ".-mb-12",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 24,
+            "y": 97,
+            "width": 1232,
+            "height": 693
       }
     },
     {
+      "comment": "Bug #10 - z-index",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/VideoPlayer.jsx",
@@ -145,10 +156,10 @@
       "buggy_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-0 text-4xl\"",
       "css_selector": ".z-0",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+            "x": 592,
+            "y": 395,
+            "width": 96,
+            "height": 96
       }
     }
   ]
