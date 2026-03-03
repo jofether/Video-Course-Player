@@ -1,5 +1,9 @@
 {
   "repository": "Video Course Player",
+  "playwright_config": {
+    "viewport_height": 2500,
+    "note": "Extended viewport required to capture full grid wrap and deep course card list."
+  },
   "bugs": [
     {
       "comment": "Bug #1 - grid-cols",
@@ -9,7 +13,7 @@
       "line_number": 24,
       "clean_code": "<div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8 p-6\">",
       "buggy_code": "<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8 p-6\">",
-      "css_selector": ".grid",
+      "css_selector": "div.grid.p-6",
       "bounding_box": {
             "x": 0,
             "y": 73,
@@ -25,7 +29,7 @@
       "line_number": 12,
       "clean_code": "<div className=\"p-6 space-y-4\">",
       "buggy_code": "<div className=\"p-0 space-y-4\">",
-      "css_selector": ".p-0",
+      "css_selector": "div.shadow-xl > div.space-y-4",
       "bounding_box": {
             "x": 25,
             "y": 1522,
@@ -41,7 +45,7 @@
       "line_number": 16,
       "clean_code": "<p className=\"text-sm text-slate-400 mt-1\">{course.instructor}</p>",
       "buggy_code": "<p className=\"text-sm text-slate-950 mt-1\">{course.instructor}</p>",
-      "css_selector": ".text-slate-950",
+      "css_selector": "div.shadow-xl h2 + p",
       "bounding_box": {
             "x": 25,
             "y": 1554,
@@ -50,14 +54,14 @@
       }
     },
     {
-      "comment": "Bug #4 - rounded-xll",
+      "comment": "Bug #4 - rounded-2x",
       "bug_category": "Typo",
-      "bug_type": "rounded-xll",
+      "bug_type": "rounded-2x",
       "file_modified": "src/components/LessonsList.jsx",
       "line_number": 7,
       "clean_code": "<div className=\"p-6 border-b border-slate-700\">",
       "buggy_code": "<div className=\"p-6 border-b border-slate-700 rounded-2x\">",
-      "css_selector": ".rounded-2x",
+      "css_selector": "div.p-6.border-b.border-slate-700",
       "bounding_box": {
             "x": 25,
             "y": 2127,
@@ -73,11 +77,11 @@
       "line_number": 49,
       "clean_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-200 group-hover:text-white'}`}>",
       "buggy_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-50 group-hover:text-white'}`}>",
-      "css_selector": ".text-slate-50",
+      "css_selector": "div.divide-y button h3.font-semibold",
       "bounding_box": {
             "x": 101,
             "y": 2381,
-            "width": 1118,
+            "width": 1200,
             "height": 24
       }
     },
@@ -89,7 +93,7 @@
       "line_number": 3,
       "clean_code": "<nav className=\"sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
       "buggy_code": "<nav className=\"sticky top-0 z-0 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
-      "css_selector": ".z-0",
+      "css_selector": "nav.sticky",
       "bounding_box": {
             "x": 0,
             "y": 0,
@@ -105,12 +109,12 @@
       "line_number": 11,
       "clean_code": "<div className=\"hidden md:flex items-center space-x-8\">",
       "buggy_code": "<div className=\"hidden md:flex-col items-center space-x-8\">",
-      "css_selector": ".md:flex-col",
+      "css_selector": "nav div.space-x-8",
       "bounding_box": {
             "x": 0,
             "y": 0,
-            "width": 0,
-            "height": 0
+            "width": 1280,
+            "height": 100
       }
     },
     {
@@ -121,7 +125,7 @@
       "line_number": 5,
       "clean_code": "<div className=\"bg-slate-800/50 p-6 rounded-xl border border-slate-700\">",
       "buggy_code": "<div className=\"bg-slate-800/50 p-6 rounded-xll border border-slate-700\">",
-      "css_selector": ".rounded-xll",
+      "css_selector": "div.bg-slate-800.p-6.border.border-slate-700",
       "bounding_box": {
             "x": 24,
             "y": 916,
@@ -138,12 +142,12 @@
       "line_number": 3,
       "clean_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group mb-6\">",
       "buggy_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group -mb-12\">",
-      "css_selector": ".-mb-12",
+      "css_selector": "div.aspect-video",
       "bounding_box": {
             "x": 24,
             "y": 97,
             "width": 1232,
-            "height": 693
+            "height": 800
       }
     },
     {
@@ -154,12 +158,12 @@
       "line_number": 14,
       "clean_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-10 text-4xl\"",
       "buggy_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-0 text-4xl\"",
-      "css_selector": ".z-0",
+      "css_selector": "button.rounded-full.flex",
       "bounding_box": {
-            "x": 592,
-            "y": 395,
-            "width": 96,
-            "height": 96
+            "x": 24,
+            "y": 97,
+            "width": 1232,
+            "height": 693
       }
     }
   ]
