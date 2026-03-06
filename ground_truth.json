@@ -7,12 +7,13 @@
   "bugs": [
     {
       "comment": "Bug #1 - grid-cols",
+      "report_text": "The course cards are displaying in a narrow two-column layout on large screens instead of three columns, causing excessive wrapping and poor space utilization.",
       "bug_category": "Layout",
       "bug_type": "grid-cols",
       "file_modified": "src/App.jsx",
       "line_number": 24,
-      "clean_code": "<div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8 p-6\">",
-      "buggy_code": "<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8 p-6\">",
+      "neg_code": "<div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8 p-6\">",
+      "pos_code": "<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8 p-6\">",
       "css_selector": "div.grid.p-6",
       "bounding_box": {
             "x": 0,
@@ -23,12 +24,13 @@
     },
     {
       "comment": "Bug #2 - padding",
+      "report_text": "The course card content is touching the card edges without any internal spacing or breathing room.",
       "bug_category": "Spacing",
       "bug_type": "padding",
       "file_modified": "src/components/CourseCard.jsx",
       "line_number": 12,
-      "clean_code": "<div className=\"p-6 space-y-4\">",
-      "buggy_code": "<div className=\"p-0 space-y-4\">",
+      "neg_code": "<div className=\"p-6 space-y-4\">",
+      "pos_code": "<div className=\"p-0 space-y-4\">",
       "css_selector": "div.shadow-xl > div.space-y-4",
       "bounding_box": {
             "x": 25,
@@ -39,12 +41,13 @@
     },
     {
       "comment": "Bug #3 - text-slate-950",
+      "report_text": "The instructor name text is too dark to read against the dark card background, creating poor contrast and illegibility.",
       "bug_category": "Color",
       "bug_type": "text-slate-950",
       "file_modified": "src/components/CourseCard.jsx",
       "line_number": 16,
-      "clean_code": "<p className=\"text-sm text-slate-400 mt-1\">{course.instructor}</p>",
-      "buggy_code": "<p className=\"text-sm text-slate-950 mt-1\">{course.instructor}</p>",
+      "neg_code": "<p className=\"text-sm text-slate-400 mt-1\">{course.instructor}</p>",
+      "pos_code": "<p className=\"text-sm text-slate-950 mt-1\">{course.instructor}</p>",
       "css_selector": "div.shadow-xl h2 + p",
       "bounding_box": {
             "x": 25,
@@ -55,12 +58,13 @@
     },
     {
       "comment": "Bug #4 - rounded-2x",
+      "report_text": "The lesson item styling is broken with an invalid style applied causing unexpected rendering behavior.",
       "bug_category": "Typo",
       "bug_type": "rounded-2x",
       "file_modified": "src/components/LessonsList.jsx",
       "line_number": 7,
-      "clean_code": "<div className=\"p-6 border-b border-slate-700\">",
-      "buggy_code": "<div className=\"p-6 border-b border-slate-700 rounded-2x\">",
+      "neg_code": "<div className=\"p-6 border-b border-slate-700\">",
+      "pos_code": "<div className=\"p-6 border-b border-slate-700 rounded-2x\">",
       "css_selector": "div.p-6.border-b.border-slate-700",
       "bounding_box": {
             "x": 25,
@@ -71,12 +75,13 @@
     },
     {
       "comment": "Bug #5 - text-slate-50",
+      "report_text": "The inactive lesson title text appears too bright and harsh, creating excessive contrast with the dark interface and reducing visual hierarchy.",
       "bug_category": "Color",
       "bug_type": "text-slate-50",
       "file_modified": "src/components/LessonsList.jsx",
       "line_number": 49,
-      "clean_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-200 group-hover:text-white'}`}>",
-      "buggy_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-50 group-hover:text-white'}`}>",
+      "neg_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-200 group-hover:text-white'}`}>",
+      "pos_code": "<h3 className={`font-semibold ${isActive ? 'text-cyan-400' : 'text-slate-50 group-hover:text-white'}`}>",
       "css_selector": "div.divide-y button h3.font-semibold",
       "bounding_box": {
             "x": 101,
@@ -87,12 +92,13 @@
     },
     {
       "comment": "Bug #6 - z-index",
+      "report_text": "The navigation bar is being hidden behind other content elements as the page scrolls down.",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/Navigation.jsx",
       "line_number": 3,
-      "clean_code": "<nav className=\"sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
-      "buggy_code": "<nav className=\"sticky top-0 z-0 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
+      "neg_code": "<nav className=\"sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
+      "pos_code": "<nav className=\"sticky top-0 z-0 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm\">",
       "css_selector": "nav.sticky",
       "bounding_box": {
             "x": 0,
@@ -103,12 +109,13 @@
     },
     {
       "comment": "Bug #7 - flexbox",
+      "report_text": "The navigation menu items are stacking vertically instead of appearing in a horizontal row on medium and larger screens.",
       "bug_category": "Layout",
       "bug_type": "flexbox",
       "file_modified": "src/components/Navigation.jsx",
       "line_number": 11,
-      "clean_code": "<div className=\"hidden md:flex items-center space-x-8\">",
-      "buggy_code": "<div className=\"hidden md:flex-col items-center space-x-8\">",
+      "neg_code": "<div className=\"hidden md:flex items-center space-x-8\">",
+      "pos_code": "<div className=\"hidden md:flex-col items-center space-x-8\">",
       "css_selector": "nav div.space-x-8",
       "bounding_box": {
             "x": 0,
@@ -119,12 +126,13 @@
     },
     {
       "comment": "Bug #8 - rounded-xll",
+      "report_text": "The tab content container has an invalid style applied preventing proper rounded corners from displaying.",
       "bug_category": "Typo",
       "bug_type": "rounded-xll",
       "file_modified": "src/components/TabContent.jsx",
       "line_number": 5,
-      "clean_code": "<div className=\"bg-slate-800/50 p-6 rounded-xl border border-slate-700\">",
-      "buggy_code": "<div className=\"bg-slate-800/50 p-6 rounded-xll border border-slate-700\">",
+      "neg_code": "<div className=\"bg-slate-800/50 p-6 rounded-xl border border-slate-700\">",
+      "pos_code": "<div className=\"bg-slate-800/50 p-6 rounded-xll border border-slate-700\">",
       "css_selector": "div.bg-slate-800.p-6.border.border-slate-700",
       "bounding_box": {
             "x": 24,
@@ -132,16 +140,16 @@
             "width": 1232,
             "height": 172
       }
-
     },
     {
       "comment": "Bug #9 - margin",
+      "report_text": "The video player is creating excessive downward overlap with the content below it, causing visual collision and misalignment.",
       "bug_category": "Spacing",
       "bug_type": "margin",
       "file_modified": "src/components/VideoPlayer.jsx",
       "line_number": 3,
-      "clean_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group mb-6\">",
-      "buggy_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group -mb-12\">",
+      "neg_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group mb-6\">",
+      "pos_code": "<div className=\"relative w-full aspect-video bg-black rounded-2xl shadow-2xl border border-slate-700 overflow-hidden group -mb-12\">",
       "css_selector": "div.aspect-video",
       "bounding_box": {
             "x": 24,
@@ -152,12 +160,13 @@
     },
     {
       "comment": "Bug #10 - z-index",
+      "report_text": "The play button is hidden behind the video player overlay and cannot be clicked or interacted with.",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/VideoPlayer.jsx",
       "line_number": 14,
-      "clean_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-10 text-4xl\"",
-      "buggy_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-0 text-4xl\"",
+      "neg_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-10 text-4xl\"",
+      "pos_code": "className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all active:scale-95 z-0 text-4xl\"",
       "css_selector": "button.rounded-full.flex",
       "bounding_box": {
             "x": 24,
