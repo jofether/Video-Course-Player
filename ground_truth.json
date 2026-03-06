@@ -133,7 +133,7 @@
       "line_number": 5,
       "neg_code": "<div className=\"bg-slate-800/50 p-6 rounded-xl border border-slate-700\">",
       "pos_code": "<div className=\"bg-slate-800/50 p-6 rounded-xll border border-slate-700\">",
-      "css_selector": "div.bg-slate-800.p-6.border.border-slate-700",
+      "css_selector": "div.space-y-4 > div:first-child",
       "bounding_box": {
             "x": 24,
             "y": 916,
